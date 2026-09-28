@@ -1,0 +1,5 @@
+# Конфигурация приложения config-client, отдаётся Config Server'ом.
+# spring.application.name клиента = config-client -> сервер ищет именно этот файл.
+
+app:
+  message: "Привет из Spring Cloud Config Server!"

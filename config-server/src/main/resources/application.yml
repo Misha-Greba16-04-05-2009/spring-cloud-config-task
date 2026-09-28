@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          # Конфигурация хранится в подпапке config-repo этого же git-репозитория.
+          # uri указывает на корень репозитория (родительская папка относительно
+          # директории запуска config-server), search-paths — на подпапку с файлами.
+          # После публикации на GitHub можно заменить uri на прямую ссылку на
+          # ваш репозиторий, например: uri: https://github.com/<username>/<repo>
+          uri: file://${user.dir}/..
+          search-paths: config-repo
+          default-label: main
